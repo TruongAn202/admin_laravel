@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;//api auth
 use App\Http\Controllers\UserInfoController;//api user
 use App\Http\Controllers\BookController;//api ngau nhien sach 6
 use App\Http\Controllers\OrderController;//api quan ly don hang(lich su, payment)
+use App\Http\Controllers\UploadController;//up anh
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,5 +31,6 @@ Route::get('/sach/theo-id', [BookController::class, 'getProductById']);
 Route::get('/sach/tim-kiem', [BookController::class, 'search']);//tim kiem
 Route::get('/orders', [OrderController::class, 'getOrdersByEmail']);//don hang by mail
 Route::post('/checkout', [OrderController::class, 'checkOut']);//thanh toan
+Route::post('/upload-image', [UploadController::class, 'upload']);
 
 
